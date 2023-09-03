@@ -182,7 +182,7 @@ public class HelloController {
 
 ```xml
 <!-- 自动扫描包 -->
-<context:component-scan base-package="com.atguigu.mvc.controller"/>
+<context:component-scan base-package="com.atguigu.mvc.com.liukai.mvc.controller"/>
 
 <!-- 配置Thymeleaf视图解析器 -->
 <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
@@ -725,7 +725,7 @@ public String testRedirect(){
 >
 > 重定向视图在解析时，会先将redirect:前缀去掉，然后会判断剩余部分是否以/开头，若是则会自动拼接上下文路径
 
-### 4、视图控制器view-controller
+### 4、视图控制器view-com.liukai.mvc.controller
 
 当控制器方法中，仅仅用来实现页面跳转，即只需要设置视图名称时，可以将处理器方法使用view-controller标签进行表示
 
@@ -734,7 +734,7 @@ public String testRedirect(){
 	path：设置处理的请求地址
 	view-name：设置请求地址所对应的视图名称
 -->
-<mvc:view-controller path="/testView" view-name="success"></mvc:view-controller>
+<mvc:view-com.liukai.mvc.controller path="/testView" view-name="success"></mvc:view-com.liukai.mvc.controller>
 ```
 
 > 注：
@@ -955,10 +955,10 @@ b>当前请求必须传输请求参数_method
 
 ### 3、具体功能：访问首页
 
-##### a>配置view-controller
+##### a>配置view-com.liukai.mvc.controller
 
 ```xml
-<mvc:view-controller path="/" view-name="index"/>
+<mvc:view-com.liukai.mvc.controller path="/" view-name="index"/>
 ```
 
 ##### b>创建页面
@@ -1089,10 +1089,10 @@ public String deleteEmployee(@PathVariable("id") Integer id){
 
 ### 6、具体功能：跳转到添加数据页面
 
-##### a>配置view-controller
+##### a>配置view-com.liukai.mvc.controller
 
 ```xml
-<mvc:view-controller path="/toAdd" view-name="employee_add"></mvc:view-controller>
+<mvc:view-com.liukai.mvc.controller path="/toAdd" view-name="employee_add"></mvc:view-com.liukai.mvc.controller>
 ```
 
 ##### b>创建employee_add.html
@@ -1588,7 +1588,7 @@ public class SpringConfig {
 ```java
 @Configuration
 //扫描组件
-@ComponentScan("com.atguigu.mvc.controller")
+@ComponentScan("com.atguigu.mvc.com.liukai.mvc.controller")
 //开启MVC注解驱动
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
