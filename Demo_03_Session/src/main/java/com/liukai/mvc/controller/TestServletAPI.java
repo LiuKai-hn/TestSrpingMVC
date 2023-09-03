@@ -19,10 +19,10 @@ import java.util.Map;
 @Controller
 public class TestServletAPI {
 
-    @RequestMapping("/")
-    public String index(){
-        return "index";
-    }
+//    @RequestMapping("/")
+//    public String index(){
+//        return "index";
+//    }
 
     @RequestMapping("/testRequestServletAPI")
     public String page1(HttpServletRequest request){

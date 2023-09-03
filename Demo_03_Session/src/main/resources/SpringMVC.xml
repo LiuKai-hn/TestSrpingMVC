@@ -36,7 +36,10 @@
  -->
     <mvc:default-servlet-handler/>
 
-    <!-- 开启mvc注解驱动 -->
+    <!-- 开启mvc注解驱动
+    如果不开启，则 <mvc:view-controller path="/" view-name="index"></mvc:view-controller> 配置好后
+    所有控制器中的跳转全部失效
+    -->
     <mvc:annotation-driven>
         <mvc:message-converters>
             <!-- 处理响应中文内容乱码 -->
@@ -52,5 +55,6 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
+    <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
 
 </beans>
