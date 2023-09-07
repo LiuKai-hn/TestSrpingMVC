@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试AJAX</title>
+</head>
+<script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/axios.min.js}"></script>
+<body>
+
+<div id="app">
+    <a @click="testAxios" th:href="@{/testAxios}">测试springmvc处理ajax请求</a>
+
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        methods:{
+            testAxios:function (event){
+                axios({
+                    // 通过ajax 将 超链接的 请求转换成post
+                    method:"post",
+                    // 指定 post的请求路径为 超链接的路径
+                    url:event.target.href,
+                    // 设置参数
+                    params:{
+                        username:"admin",
+                        password:"123"
+                    }
+                }).then(function (respone){ // 返回服务器的响应
+                    alert(respone.data)
+                })
+                // 取消超链接的响应
+                event.preventDefault();
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

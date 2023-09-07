@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>success</h1>
+<p th:text="${testScope}">默认值</p><br/>
+<p th:text="${testModelAndViewScope}">默认值</p><br/>
+<p th:text="${testModelScope}">默认值</p><br/>
+<p th:text="${testMapScope}">默认值</p><br/>
+<p th:text="${testModelMapScope}">默认值</p><br/>
+
+<p th:text="${session.testSessionScope}">testSessionScope</p><br/>
+<p th:text="${application.testApplicationScope}">testApplicationScope</p><br/>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试RESTFUL</title>
+</head>
+<body>
+<a th:href="@{/user}">查询所用用户信息</a><br/>
+<a th:href="@{/user/1}">根据id查询用户信息</a><br/>
+<h3>添加用户信息</h3><br/>
+<form th:action="@{/user}" method="post">
+    用户名：<input type="text" name="username"><br/>
+    密 码：<input type="password" name="password"><br/>
+    <input type="submit" name="提交"><br/>
+</form>
+<h3>修改用户信息</h3><br/>
+<form th:action="@{/user}" method="post">
+    <input type="hidden" name="_method" value="PUT">
+    用户名：<input type="text" name="username"><br/>
+    密 码：<input type="password" name="password"><br/>
+    <input type="submit" name="修改"><br/>
+</form>
+<h1 style="color: coral">RESTFUL案例</h1>
+<a th:href="@{/employee}">访问员工信息</a>
+</body>
+</html>
